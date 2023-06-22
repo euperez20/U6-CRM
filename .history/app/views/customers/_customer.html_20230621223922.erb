@@ -1,0 +1,31 @@
+<!-- app/views/customers/_customer.html.erb -->
+
+<div class="customer-info">
+  <h2><%= customer.full_name %></h2>
+  <p><strong>Phone Number:</strong> <%= customer.phone_number %></p>
+  <p><strong>Email Address:</strong> <%= customer.email_address %></p>
+  <p><strong>Notes:</strong> <%= customer.notes %></p>
+  
+  <% if customer.image.attached? %>
+    <div class="customer-image">
+      <%= image_tag url_for(customer.image) %>
+    </div>
+  <% end %>
+</div>
+
+
+<!-- app/views/customers/_customer.html.erb -->
+
+<div class="customer-info">
+  <h2><%= customer.full_name %></h2>
+  <p><strong>Phone Number:</strong> <%= customer.phone_number %></p>
+  <p><strong>Email Address:</strong> <%= customer.email_address %></p>
+  <p><strong>Notes:</strong> <%= customer.notes %></p>
+  
+  <% if customer.image.attached? %>
+    <div class="customer-image">
+      <%= image_tag rails_blob_path(customer.image, disposition: "attachment", only_path: true) %>
+    </div>
+  <% end %>
+</div>
+
