@@ -32,9 +32,9 @@
     margin-bottom: 10px;
   }
 
-  .customer-image {
+  .img{
     width: 100%; 
-    height: 350px; 
+    height: auto; 
   }
 
   .customer-name {
