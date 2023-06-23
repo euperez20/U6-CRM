@@ -1,0 +1,11 @@
+<h1>Alphabetized Customers</h1>
+
+<% @customers.each do |customer| %>
+  <%= render partial: 'customer', locals: { customer: customer } %>
+<% end %>
+
+class CustomersController < ApplicationController
+  def alphabetized
+    @customers = Customer.order(:full_name)
+  end
+end

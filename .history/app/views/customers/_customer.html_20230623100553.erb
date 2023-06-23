@@ -1,0 +1,23 @@
+
+<!-- app/views/customers/_customer.html.erb -->
+
+<div class="customer-card">
+<%= stylesheet_link_tag 'customers', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+
+  <div class="customer-info">
+
+    <h3 class="customer-name"><%= customer.full_name %></h3> 
+    <% if customer.image.attached? %>
+      <%= image_tag url_for(customer.image), class: "customer-image" %>
+    <% else %>
+      <span class="customer-placeholder-image">No image available</span>
+    <% end %>
+       
+    <p class="customer-email">Email: <%= customer.email_address %></p>
+    <p class="customer-notes">Notes: <%= customer.notes %></p>
+    <p class="customer-phone"><%= customer.phone_number %></p>
+    
+  </div>
+</div>
+

@@ -1,0 +1,8 @@
+<h1>Alphabetized Customers</h1>
+
+<div class="customer-cards">
+<% @customers.each do |customer| %>
+  <%= render partial: 'customer', locals: { customer: customer } %>
+<% end %>
+</div>
+

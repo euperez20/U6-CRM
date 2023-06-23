@@ -1,0 +1,11 @@
+<h1>Alphabetized Customers</h1>
+
+<!-- ink back to index view -->
+<%= link_to 'Back to All Customers', customers_path %>
+
+<div class="customer-cards">
+  <% @customers.each do |customer| %>
+    <%= render partial: 'customer', locals: { customer: customer } %>
+  <% end %>
+</div>
+

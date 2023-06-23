@@ -1,0 +1,8 @@
+<!-- app/views/customers/missing_email.html.erb -->
+<h1>Customers with Missing Email</h1>
+
+<% @customers.each do |customer| %>
+  <%= render partial: 'customer', locals: { customer: customer } %>
+<% end %>
+
+
